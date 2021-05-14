@@ -1,1 +1,1 @@
-# -alculating-the-cost-of-tattoo
+# Calculating-the-cost-of-tattoo

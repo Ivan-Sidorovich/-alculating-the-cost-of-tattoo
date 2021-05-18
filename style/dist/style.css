@@ -19,20 +19,19 @@ body:before {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  overflow: scroll;
   background-color: pink;
+  overflow-x: hidden;
 }
 
 .conteiner {
-  min-height: 100vh;
-  min-width: 100vw;
+  min-height: 100%;
+  min-width: 100%;
   display: grid;
   grid-template-columns: 1fr minmax(310px, 450px) 1fr;
   grid-template-rows: 1fr;
-  overflow: scroll;
   z-index: 2;
   position: relative;
 }
@@ -71,12 +70,8 @@ body {
 .wrapper .form {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 72px 72px 105px 105px;
   row-gap: 20px;
   margin-top: 23px;
-}
-.wrapper .form .form_element {
-  background-color: pink;
 }
 .wrapper .result {
   margin-top: 28px;
@@ -105,8 +100,78 @@ body {
     line-height: 33px;
   }
 }
-@media (min-height: 737px) {
-  .wrapper {
-    margin: auto 20px;
-  }
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin-bottom: 17px;
+  border-radius: 6px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  background: #fbecea;
+  border-bottom: 2px solid #fbecea;
+  border-top: 2px solid #fbecea;
+  border-radius: 6px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #fbecea;
+  margin-top: -10px;
+  z-index: 2;
+  padding: 10px;
+}
+
+.form_element .form_element_p {
+  text-align: left;
+  margin-bottom: 15px;
+}
+.form_element .result_range {
+  width: 114px;
+  height: 36px;
+  margin: 0 auto;
+  background: rgba(176, 133, 126, 0.61);
+  border-radius: 6px;
+  backdrop-filter: blur(2px);
+}
+
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.selectContainer .select {
+  width: 100%;
+  height: 36px;
+  background: rgba(176, 133, 126, 0.61);
+  border-radius: 6px;
+  backdrop-filter: blur(2px);
+  display: grid;
+  grid-template-columns: 1fr 36px;
+  align-items: center;
+  justify-items: center;
+}
+.selectContainer .select p {
+  margin-right: auto;
+  margin-left: 15px;
+}
+.selectContainer .select i {
+  grid-column-start: 2;
+  margin-bottom: 5px;
+}
+.selectContainer .popUp {
+  position: relative;
+  width: 97%;
+  height: 100px;
+  background: rgba(251, 236, 234, 0.1);
+  transition-duration: 0.5s;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
 }

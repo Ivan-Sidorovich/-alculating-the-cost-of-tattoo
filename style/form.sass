@@ -1,4 +1,3 @@
-
 input[type="range"]
     -webkit-appearance: none
     width: 100%
@@ -37,6 +36,17 @@ input[type="range"]::-webkit-slider-thumb
         background: rgba(176, 133, 126, 0.61)
         border-radius: 6px
         backdrop-filter: blur(2px)
+        display: flex
+        justify-content: center
+        align-items: center
+
+        p
+            font-family: Bookman Old Style
+            font-style: normal
+            font-weight: 300
+            font-size: 16px
+            line-height: 19px
+            color: #383332
 
 .selectContainer
     display: flex
@@ -63,8 +73,26 @@ input[type="range"]::-webkit-slider-thumb
     .popUp
         position: relative
         width: 97%
-        height: 100px
+        height: 0px
         background: rgba(251,236,234,.1)
         transition-duration: .5s
         overflow: hidden
-        backdrop-filter: blur(2px)
+        .back
+            width: 100%
+            height: 100px
+            position: absolute
+            z-index: -1
+            backdrop-filter: blur(4px)
+            -webkit-backdrop-filter: blur(4px)
+
+        .color
+            height: 100px
+
+        .pleace
+            height: 50px
+
+    .open_color
+        height: 100px
+
+    .open_pleace
+        height: 100px

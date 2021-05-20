@@ -113,7 +113,6 @@ input[type="range"]::-webkit-slider-thumb {
 
 .selectContainer .popUp .back {
   width: 100%;
-  height: 100px;
   position: absolute;
   z-index: -1;
   backdrop-filter: blur(4px);
@@ -121,18 +120,43 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .selectContainer .popUp .color {
-  height: 100px;
+  height: 112px;
 }
 
 .selectContainer .popUp .pleace {
-  height: 50px;
+  height: 304px;
 }
 
-.selectContainer .open_color {
-  height: 100px;
+.selectContainer .popUp p {
+  text-align: left;
+  margin-top: 7px;
+  margin-left: 9px;
+  margin-bottom: 7px;
+  pfont-family: Bookman Old Style;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 23px;
+  color: #FBECEA;
 }
 
-.selectContainer .open_pleace {
-  height: 100px;
+.selectContainer .popUp .line_select {
+  width: 95%;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #FBECEA;
+}
+
+.selectContainer #popUp_pleace {
+  -webkit-transition-duration: .8s;
+          transition-duration: .8s;
+}
+
+.selectContainer .popUp_color_open {
+  height: 112px;
+}
+
+.selectContainer .popUp_pleace_open {
+  height: 304px;
 }
 /*# sourceMappingURL=form.css.map */

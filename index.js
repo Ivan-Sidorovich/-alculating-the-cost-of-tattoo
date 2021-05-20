@@ -19,10 +19,22 @@ let popUpColor = document.getElementById("popUp_color");
 let popUpPleace = document.getElementById("popUp_pleace");
 
 selectColor.addEventListener("pointerup", function () {
-    popUpColor.classList.toggle('open_color')
-    console.log(this);
+    popUpColor.classList.toggle('popUp_color_open');
 });
+
 selectPlece.addEventListener("pointerup", function () {
-    popUpPleace.classList.toggle('open_pleace');
-    console.log(this)
+    popUpPleace.classList.toggle('popUp_pleace_open');
 });
+
+
+
+(function rendering() {
+    let elements = document.querySelectorAll(".popUp_p");
+    elements.forEach(i => {
+        i.addEventListener("pointerup", function () {
+            i.parentElement.classList.toggle(`${i.parentElement.id}_open`);
+            document.getElementById(`${i.parentElement.id}_p`).innerHTML = i.innerHTML;
+            console.log(this.id);
+        });
+    })
+})();

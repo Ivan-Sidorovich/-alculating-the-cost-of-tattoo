@@ -15,21 +15,33 @@
     <div class="conteiner">
         <div class="wrapper">
             <header>
+                <img src="img/logo.png" alt="logo" id="logo">
                 <h1>Калькулятор<br>стоимости&nbsp;татуировки</h1>
                 <div class="line"></div>
-                <p class="standart_text">Калькулятор&nbsp;расчитывает примерную&nbsp;стоимость&nbsp;таутеровки</p>
+                <p class="standart_text">Калькулятор&nbsp;расчитывает примерную&nbsp;стоимость&nbsp;татуировки.</p>
+                <div class="detailed">
+                    <p class="standart_text" id="detailed_p">подробнее&nbsp;&nbsp;</p><i
+                        class="fas fa-plus fa-minus standart_text" id="detailed_i"></i>
+                </div>
+                <div class="rules" id="rules">
+                    <div class="back rule"></div>
+                    <p>Повседневная практика показывает, что рамки и место обучения кадров в
+                        значительной степени
+                        обуславливает создание новых предложений. Таким образом начало повседневной работы по
+                        формированию позиции играет важную роль в формировании дальнейших направлений развития.</p>
+                </div>
             </header>
             <div class="form">
                 <div class="form_element">
-                    <p class="standart_text form_element_p">Выберите цветность татуировки</p>
+                    <p class="standart_text form_element_p">Выберите количество цветов</p>
                     <div class="selectContainer">
                         <div class="select" id="select_color">
                             <p id="popUp_color_p">Цвет</p>
-                            <i class="fas fa-sort-down"></i>
+                            <i class="fas fa-sort-down" id="popUp_color_i"></i>
                         </div>
                         <div class="popUp" id="popUp_color">
                             <div class="back color"></div>
-                            <p id="1" class="popUp_p">Одноцветная</p>
+                            <p id="1" class="popUp_p">Один цвет</p>
                             <div class="line_select"></div>
                             <p id="1.1" class="popUp_p">2 цвета</p>
                             <div class="line_select"></div>
@@ -42,7 +54,7 @@
                     <div class="selectContainer">
                         <div class="select" id="select_pleace">
                             <p id="popUp_pleace_p">Место</p>
-                            <i class="fas fa-sort-down"></i>
+                            <i class="fas fa-sort-down" id="popUp_pleace_i"></i>
                         </div>
                         <div class="popUp" id="popUp_pleace">
                             <div class="back pleace"></div>
@@ -82,8 +94,13 @@
                 </div>
             </div>
             <div class="result">
-                <div class="finaly_price"></div>
-                <p class="standart_text">Ура! Это примерная стоимость твоей тату! Пиши&nbsp;мне в Директ, обсудим
+                <div class="finaly_price">
+                    <p class="standart_text">
+                        Стоимость&nbsp;&nbsp;<span id="finaly_price_span"></span>&nbsp;руб.
+                    </p>
+                </div>
+                <p class="standart_text" id="after_result">Ура! Это примерная стоимость твоей тату! Пиши&nbsp;мне в
+                    Директ, обсудим
                     детали)</p>
             </div>
         </div>
